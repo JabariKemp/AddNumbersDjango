@@ -1,0 +1,32 @@
+.container{
+  background-color: #85C1E9 ;
+}
+.main {
+  margin-top:15%;
+  padding: 10px;
+}
+
+#equals {
+text-align: center;
+}
+
+#plus {
+text-align: center;
+}
+
+.firstNumber{
+  text-align: center;
+}
+
+.secondNumber{
+  text-align: center;
+}
+
+.answer{
+  text-align: center;
+}
+
+.btn{
+ margin-bottom: 25px;
+ margin-top: 15px;
+}
