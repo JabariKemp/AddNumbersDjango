@@ -5,7 +5,9 @@
   margin-top:15%;
   padding: 10px;
 }
-
+.jumbotron {
+    background-color:transparent !important;
+}
 #equals {
 text-align: center;
 }

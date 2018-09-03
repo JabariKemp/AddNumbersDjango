@@ -13,7 +13,7 @@
     <div  class="container">
       <div class="row">
         <div class="col-sm-12">
-          <div class="jumbotron main">
+          <div style="background:#FFFFFF" class="jumbotron main" id="jumbo">
             <h1 class="display-4">Add Two Numbers</h1>
             <p class="lead">Enter two numbers below to add them.</p>
             <hr class="my-4">
@@ -41,7 +41,9 @@
               </div>
 
               <div class="col-sm-1">
-                <h1 class="answer">_</h1>
+              <!--  <h1 class="answer">_</h1> -->
+                <iframe class="answer" src="http://localhost:8080/JavaAPI/rest/add?firstNum=0&secondNum=0"  height="50" frameborder="0" scrolling="no"></iframe>
+
               </div>
 
 
@@ -66,11 +68,19 @@
     var two = document.getElementsByClassName("secondNumber")
     var answer = parseFloat(one[0].value)+parseFloat(two[0].value);
 
+    const HTTP = new XMLHttpRequest();
+    const url = 'http://localhost:8080/JavaAPI/rest/add?firstNum='+ one[0].value.toString()+'&secondNum='+two[0].value.toString();
+    console.log(url.toString());
+
+
     if(answer.toString()=="NaN"){
       alert('Enter A Number')
     }else{
-      document.getElementsByClassName("answer")[0].innerHTML = answer.toString();
-      console.log(answer);
+      //document.getElementsByClassName("answer")[0].innerHTML = answer.toString();
+      //console.log(answer);
+
+      document.getElementsByClassName("answer")[0].src = url;
+      console.log(document.getElementsByClassName("answer")[0].src);
     }
 
 
